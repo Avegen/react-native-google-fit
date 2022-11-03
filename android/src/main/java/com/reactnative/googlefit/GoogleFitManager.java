@@ -224,11 +224,13 @@ public class GoogleFitManager implements ActivityEventListener {
     }
 
     public boolean isAuthorized() {
-        if (mApiClient != null && mApiClient.isConnected()) {
-            return true;
-        } else {
+        // if (mApiClient != null && mApiClient.isConnected()) {
+        //     return true;
+        // } else {
+        //     return false;
+        // }
+// if is Authorized true, it does not check for new scopes and always throws true, hence keeping it always false
             return false;
-        }
     }
 
     protected void stop() {
